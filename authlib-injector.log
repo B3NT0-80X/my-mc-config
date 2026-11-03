@@ -1,0 +1,45 @@
+Logging started at 2026-10-31T16:16:21.056Z
+[authlib-injector] [INFO] Version: 1.2.8
+[authlib-injector] [INFO] Authentication server: http://127.0.0.1:59063
+[authlib-injector] [WARNING] You are using HTTP protocol, which is INSECURE! Please switch to HTTPS if possible.
+[authlib-injector] [INFO] Httpd is running on port 60717
+[authlib-injector] [INFO] Transformed [bua] with [Constant URL Transformer]
+[authlib-injector] [INFO] Transformed [net.minecraft.client.main.Main] with [Main Arguments Transformer]
+[authlib-injector] [INFO] Enable MC-52974 Workaround
+[authlib-injector] [INFO] Transformed [net.minecraft.client.entity.AbstractClientPlayer] with [Constant URL Transformer]
+[authlib-injector] [INFO] Transformed [com.mojang.authlib.HttpAuthenticationService] with [ConcatenateURL Workaround]
+[authlib-injector] [INFO] Transformed [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService] with [Constant URL Transformer]
+[authlib-injector] [INFO] Transformed [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService] with [Texture Whitelist Transformer]
+[authlib-injector] [INFO] Transformed [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService] with [MC-52974 Workaround]
+[authlib-injector] [INFO] Transformed [com.natamus.collective.data.GlobalVariables] with [Constant URL Transformer]
+[authlib-injector] [INFO] Transformed [com.mojang.authlib.yggdrasil.YggdrasilGameProfileRepository] with [Constant URL Transformer]
+[authlib-injector] [WARNING] An error occurred while processing request [/https/sessionserver.mojang.com/session/minecraft/profile/85daf09e5a63350da5766c42419be127]
+java.io.UncheckedIOException: java.io.FileNotFoundException: http://127.0.0.1:59063/sessionserver/session/minecraft/profile/85daf09e5a63350da5766c42419be127?unsigned=false
+	at moe.yushi.authlibinjector.yggdrasil.YggdrasilClient.queryProfile(YggdrasilClient.java:92)
+	at moe.yushi.authlibinjector.httpd.QueryProfileFilter.handle(QueryProfileFilter.java:82)
+	at moe.yushi.authlibinjector.httpd.URLProcessor$1.serve(URLProcessor.java:143)
+	at moe.yushi.authlibinjector.internal.fi.iki.elonen.HTTPSession.execute(HTTPSession.java:246)
+	at moe.yushi.authlibinjector.internal.fi.iki.elonen.NanoHTTPD$ClientHandler.run(NanoHTTPD.java:104)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.FileNotFoundException: http://127.0.0.1:59063/sessionserver/session/minecraft/profile/85daf09e5a63350da5766c42419be127?unsigned=false
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1949)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1551)
+	at moe.yushi.authlibinjector.util.IOUtils.http(IOUtils.java:49)
+	at moe.yushi.authlibinjector.yggdrasil.YggdrasilClient.queryProfile(YggdrasilClient.java:90)
+	... 5 more
+
+[authlib-injector] [WARNING] An error occurred while processing request [/https/sessionserver.mojang.com/session/minecraft/profile/85daf09e5a63350da5766c42419be127]
+java.io.UncheckedIOException: java.io.FileNotFoundException: http://127.0.0.1:59063/sessionserver/session/minecraft/profile/85daf09e5a63350da5766c42419be127?unsigned=false
+	at moe.yushi.authlibinjector.yggdrasil.YggdrasilClient.queryProfile(YggdrasilClient.java:92)
+	at moe.yushi.authlibinjector.httpd.QueryProfileFilter.handle(QueryProfileFilter.java:82)
+	at moe.yushi.authlibinjector.httpd.URLProcessor$1.serve(URLProcessor.java:143)
+	at moe.yushi.authlibinjector.internal.fi.iki.elonen.HTTPSession.execute(HTTPSession.java:246)
+	at moe.yushi.authlibinjector.internal.fi.iki.elonen.NanoHTTPD$ClientHandler.run(NanoHTTPD.java:104)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.FileNotFoundException: http://127.0.0.1:59063/sessionserver/session/minecraft/profile/85daf09e5a63350da5766c42419be127?unsigned=false
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1949)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1551)
+	at moe.yushi.authlibinjector.util.IOUtils.http(IOUtils.java:49)
+	at moe.yushi.authlibinjector.yggdrasil.YggdrasilClient.queryProfile(YggdrasilClient.java:90)
+	... 5 more
+

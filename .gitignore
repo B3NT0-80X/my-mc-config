@@ -1,0 +1,18 @@
+# Exclude binary mods, world saves, and heavy cache
+mods/*.jar
+saves/
+logs/
+crash-reports/
+asm/
+*.zip
+# exclude other
+bendspacks
+betweenlands_gallery
+fancymenu_*
+shaderpacks
+texturepacks
+xaero
+XaeroWaypoints_BACKUP240807
+notes
+mods 
+resources
